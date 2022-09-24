@@ -74,6 +74,26 @@ div.principal-escrito h2{
     padding-bottom: 25px;
 }
 
+.pedido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 280px;
+    border-radius: 15px;
+    margin: 10px 0 25px 20px;
+    font-family: 'Righteous', cursive;
+    background-color: #B56376;
+    color: #FFF2E7;
+    font-size: 1.3em;
+}
+
+.pedido:hover{
+    background-color: #FFF2E7;
+    color: #B56376;
+    transition: 0.35s ease-out;
+}
+
 .brownie{
     height: 430px;
     padding-left: 25px;
