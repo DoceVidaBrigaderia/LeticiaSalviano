@@ -10,9 +10,10 @@
     border: none;
 }
 
-body{
-    max-width: 100%;
+body, html{
+    width: 100%;
     background: linear-gradient(68.5deg, #d7a2bb 16.62%, #B96275 85.61%);
+    overflow-x: hidden;
 }
 
 header{
