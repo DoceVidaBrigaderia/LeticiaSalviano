@@ -12,51 +12,55 @@
 
 body, html{
     width: 100%;
-    background: linear-gradient(68.5deg, #d7a2bb 16.62%, #B96275 85.61%);
+    background: linear-gradient(to right, #d7a2bb, #B56376);
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
 }
 
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 50px;
     border-bottom: 1px solid #FFF2E7;
+    position: relative;
+    background: linear-gradient(to right, #d7a2bb, #B56376);
 }
 
-.logo{
-    width: 100px;
-    border-radius: 50%;
+.mobile{
+    display: none;
 }
 
-header nav a{
-    padding: 10px;
+nav a{
+    font-size: 1.2em;
     font-family: 'Sarala', sans-serif;
     text-decoration: none;
     color: #FFF2E7;
     font-weight: bolder;
+    padding: 30px;
 }
 
-header nav a:hover{
+nav a:hover{
     text-decoration: underline;
 }
 
-section.principal{
+section.home{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 30px;
+    padding-top: 50px;
+    padding-bottom: 135px;
 }
 
-div.principal-escrito{
+div.home-escrito{
     display: flex;
     flex-direction: column;
     gap: 25px;
-    
 }
 
-div.principal-escrito h1{
+div.home-escrito h1{
     font-family: 'Righteous', cursive;
     font-weight: 400;
     font-size: 64px;
@@ -65,14 +69,13 @@ div.principal-escrito h1{
     padding-left: 25px;
 }
 
-div.principal-escrito h2{
+div.home-escrito h2{
     font-family: 'Sarala', sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 30px;
     color: #FFF2E7;
     padding-top: 0;
     padding-left: 25px;
-    padding-bottom: 25px;
 }
 
 .pedido{
@@ -95,12 +98,49 @@ div.principal-escrito h2{
     transition: 0.35s ease-out;
 }
 
-.brownie{
-    height: 430px;
-    padding-left: 25px;
+.logo{
+    height: 380px;
+    padding-top: 10px;
+    border-radius: 50%;
 }
 
-section.secundario{
+section.sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+section.sobre h2{
+    border-top: 0.4px solid #FFF2E7;
+    padding-top: 10px;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFF2EF;
+    margin-bottom: 17px;
+    margin-top: 52px;
+}
+
+section.sobre p{
+    font-family: 'sarala', cursive;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFF2EF;
+    text-indent: 20px;
+    text-align: justify;
+    padding: 10px;
+}
+
+#top{
+    padding: 50px 0 15px 0;
+    font-size: 22px;
+}
+
+section.catalogo{
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -108,9 +148,9 @@ section.secundario{
     margin-top: 48px;
 }
 
-section.secundario h3{
+section.catalogo h2{
     border-top: 0.4px solid #FFF2E7;
-    padding-top: 20px;
+    padding-top: 10px;
     font-family: 'Righteous', cursive;
     font-weight: 400;
     font-size: 24px;
@@ -118,13 +158,54 @@ section.secundario h3{
     margin-bottom: 17px;
 }
 
-section.secundario ul{
-    font-family: 'Sarala', sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    color: #FFF2E7;
-    padding-bottom: 50px;
-    padding-left: 25px;
+section.catalogo h3{
+    font-family: 'sarala', cursive;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFF2EF;
+}
+
+.doces-imagens{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.doces{
+    height: 350px;
+    padding-bottom: 30px;
+}
+
+.mais{
+    font-family:'Righteous', cursive;
+    color: #FFF2EF;
+    font-weight: 400;
+    padding: 0;
+}
+
+section.pedido-final{
+    text-align: center;
+    padding: 50px 0 80px 0;
+}
+
+section.pedido-final a{
+    font-family:'Righteous', cursive;
+    font-size: 1.1em;
+    background-color: #B56376;
+    color: #FFF2EF;
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+section.pedido-final a:hover{
+    background-color: #FFF2EF;
+    color: #B56376;
+    transition: 0.35s ease-out;
 }
 
 footer{
@@ -147,8 +228,76 @@ footer p a:hover{
     text-decoration: underline;
 }
 
-@media (max-whidth: 768px) {
+@media (max-width: 768px) {
     body, html{
         overflow-x: hidden;
     }
+
+    section.home{
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .logo{
+        height: 330px;
+    }
+
+    header{
+        padding: 10px;
+    }
+
+    nav.pc{
+        display: none;
+    }
+
+    nav.mobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav.mobile a{
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        margin: 0;
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .logo{
+        height: 320px;
+    }
+
+    #nos{
+        padding-left: 15px;
+        border-right: 0.5px solid #FFF2E7;
+    }
+
+    section.sobre h2{
+        border-top: 0.4px solid #FFF2E7;
+        padding-top: 10px;
+        font-family: 'Righteous', cursive;
+        font-weight: 400;
+        font-size: 24px;
+        color: #FFF2EF;
+        margin-bottom: 17px;
+    }
+
+    section.sobre p{
+        font-family: 'sarala', cursive;
+        font-weight: 400;
+        font-size: 18px;
+        color: #FFF2EF;
+        text-indent: 20px;
+        text-align: justify;
+        padding: 15px;
+    }
+
+    #top{
+        padding: 30px 0 10px 0;
+        font-size: 20px;
+    }
+
 }
